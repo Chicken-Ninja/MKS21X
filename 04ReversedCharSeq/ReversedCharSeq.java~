@@ -1,0 +1,12 @@
+public class ReversedCharSeq implements CharSequence {
+    String data = "";
+    public ReversedCharSeq (String input) {
+	for (int counter = input.length(); counter > 0; counter -- ){
+	    data = data + input.charAt(counter);}}
+    public String toString (){
+	return data;}
+}
+
+	    
+	
+       
