@@ -2,10 +2,10 @@ abstract class LibraryBook extends Book implements Comparable<LibraryBook> {
     private String callNumber = "" ;
 
     public LibraryBook(String guy , String name, String thing , String shelf){
-	Author = guy;
-	Title = name;
-	ISBN = thing;
-	callNumber = shelf;
+	setAuthor(guy);
+	setTitle(name);
+	setISBN(thing);
+	setcallNumber(shelf);
     }
 
     public String getcallNumber() {
@@ -22,4 +22,7 @@ abstract class LibraryBook extends Book implements Comparable<LibraryBook> {
 
     public int compareTo (LibraryBook x) {
 	return getcallNumber().compareTo(x.getcallNumber());}
+
+    public String toString () {
+	return getTitle() + " " + getAuthor() + " " + getISBN() + " " + getcallNumber() + " " + circulationStatus();}
 }
