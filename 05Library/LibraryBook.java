@@ -2,9 +2,7 @@ abstract class LibraryBook extends Book implements Comparable<LibraryBook> {
     private String callNumber = "" ;
 
     public LibraryBook(String guy , String name, String thing , String shelf){
-	setAuthor(guy);
-	setTitle(name);
-	setISBN(thing);
+	super(guy , name , thing);
 	setcallNumber(shelf);
     }
 

@@ -4,9 +4,9 @@ public class Book {
     private String ISBN = "";
     public Book () {}
     public Book (String guy , String name, String thing){
-	Author = guy;
-	Title = name;
-	ISBN = thing;
+	setAuthor(guy);
+	setTitle(name);
+	setISBN(thing);
     }
     public String getAuthor () {
 	return Author;}
