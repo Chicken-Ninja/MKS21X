@@ -1,4 +1,4 @@
-abstract class ReferenceBook extends LibraryBook {
+public class ReferenceBook extends LibraryBook {
     private String Collection;
 
     public ReferenceBook (String guy , String name, String thing , String shelf, String collect){
@@ -11,8 +11,9 @@ abstract class ReferenceBook extends LibraryBook {
     public void setCollection(String collect){
 	Collection = collect;}
 
-    public void checkout() {
-	System.out.println("Cannot check out a reference book");}
+    public void checkout(String thing1 , String thing2) {
+	//	System.out.println("Cannot check out a reference book");}
+	System.out.println ("Cannot check out a reference book");}
     public void returned() {
 	System.out.println("Reference book could not have been checked out -- return impossible");}
     public String circulationStatus () {
