@@ -1,0 +1,21 @@
+import java.util.Iterator;
+public class SuperArrayIterator implements iterator<String> {
+    int end; 
+    int current = 0;
+    public SuperArrayIterator(SuperArray a , int stop);{
+	end = a.size();}
+    
+    public void remove() {
+	throw new UnsupportedOperationException (); }
+
+    public String next() {
+	if(hasnext()){
+	    return a.get(current);
+	    current++;}
+	else{System.exit(0);}}
+
+    public boolean hasNext() {
+	if (current <= end) {return true;}
+	else{ return false;} }
+}
+    
