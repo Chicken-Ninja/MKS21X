@@ -1,0 +1,21 @@
+public class Interval {
+    public static void Interval(int[] ary) {
+	for(int counter = 0; counter < ary.length; counter++ )
+	    {swap(ary , counter , positionless(ary , counter));}
+    }
+    
+    public static int positionless(int[] ary, int start) {
+	int smallest = ary[start];
+	int position = start; 
+	
+	for(int counter = start; counter > 0; counter --){
+	    if(ary[counter] < ary[start]) {position = counter + 1;
+		break;}}
+	return position;}
+    public static void swap (int[] ary , int a , int b) {
+	int c = ary[a];
+	ary[a] = ary[b];
+	ary[b] = c;
+    }
+}
+	    
