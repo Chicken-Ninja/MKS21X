@@ -2,7 +2,7 @@ import java.util.Arrays;
 public class Sorts {
     private int Position = 0; 
 
-    public static void Interval(int[] ary) {
+    public static void insertionSort(int[] ary) {
 	for(int counter = 0; counter < ary.length; counter++ )
 	    {positionless(ary , counter);}
     
@@ -25,7 +25,7 @@ public class Sorts {
 	ary[a] = ary[b];
 	ary[b] = c;}
     
-    public static void sorts(int[]ary){
+    public static void selectionSort(int[]ary){
 	for(int counter = 0; counter < ary.length; counter++) {
 	    swap(ary , counter , NewPos(ary , counter));}
     }
