@@ -42,17 +42,17 @@ public class SuperArray {
     public String get(int index) {
 	if(index < 0 || index >= size())
 	    {System.out.println ("error");
-		return null;}
+		throw new IndexOutOfBoundsException();}
 	return data[index];}
    
     public String set(int index, String element){
-	throw new UnsupportedOperationException();
-	/*if(index < 0 || index >= size())
+	//throw new UnsupportedOperationException();
+	if(index < 0 || index >= size())
 	    {System.out.println ("error");
-		    return null;}
+		throw new IndexOutOfBoundsException();}
 	String temporary = data[index];
 	    data[index] = element;    
-	    return temporary;}*/ }
+	    return temporary;} 
     private void resize(){
 	 String [] temp = new String[size + size/2];
 	 for(int counter = 0; counter < size(); counter ++){
