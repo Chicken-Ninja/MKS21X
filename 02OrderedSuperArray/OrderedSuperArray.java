@@ -1,10 +1,19 @@
 public class OrderedSuperArray extends SuperArray{
      /*constructor initializes an empty List*/
+
+    public OrderedSuperArray() {
+	super();} 
+
   public OrderedSuperArray(int StartingCapacity){
       super(StartingCapacity);
  //Complete this.
 
   }
+
+    public OrderedSuperArray(String[] ary) {
+	super(ary.length);
+	for (int x = 0; x < ary.length; x ++) 
+	    {add(ary[x]);}}
 
   /*call the proper add.*/
   public void add(int index, String value){
@@ -75,7 +84,7 @@ public class OrderedSuperArray extends SuperArray{
   /*Write this method and any
     appropriate helper methods.*/
   public boolean add(String value){
-      int place = findBinary(value);
+      int place = find(value);
       super.add(place , value);
       return true;}
  

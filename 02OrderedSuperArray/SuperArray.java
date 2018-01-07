@@ -2,6 +2,11 @@
 public class SuperArray {
     private int size = 0;
     private String[] data = new String [0];
+    
+    public SuperArray() {
+	data = new String[10];} 
+	
+
     public SuperArray(int startingcapacity) {
 	data = new String [startingcapacity] ;
 	
@@ -41,8 +46,7 @@ public class SuperArray {
     
     public String get(int index) {
 	if(index < 0 || index >= size())
-	    {System.out.println ("error");
-		return null;}
+	    {throw new IndexOutOfBoundsException();}
 	return data[index];}
    
     public String set(int index, String element){
@@ -73,7 +77,7 @@ public class SuperArray {
 	return count;}
     public void add(int index, String element){
 	if (index < 0 || index > size())
-	    {System.out.println("Error");}//if out of bounds
+	    {throw new IndexOutOfBoundsException();}
 	else{
 	String [] temp = new String[size + 1];
 	boolean addone = false; 
@@ -89,8 +93,8 @@ public class SuperArray {
 	data = temp; }}
     public String remove(int index){
 	if(index < 0 || index >= size())
-	    {System.out.println("Error");
-		return null;}
+	    {throw new IndexOutOfBoundsException (); }
+		
 	else { 
 	    
 	    String value = data[index];
