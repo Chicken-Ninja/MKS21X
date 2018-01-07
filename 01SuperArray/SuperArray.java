@@ -41,14 +41,14 @@ public class SuperArray {
     
     public String get(int index) {
 	if(index < 0 || index >= size())
-	    {System.out.println ("error");
+	    {
 		throw new IndexOutOfBoundsException();}
 	return data[index];}
    
     public String set(int index, String element){
 	//throw new UnsupportedOperationException();
 	if(index < 0 || index >= size())
-	    {System.out.println ("error");
+	    {
 		throw new IndexOutOfBoundsException();}
 	String temporary = data[index];
 	    data[index] = element;    
@@ -73,7 +73,7 @@ public class SuperArray {
 	return count;}
     public void add(int index, String element){
 	if (index < 0 || index > size())
-	    {System.out.println("Error");}//if out of bounds
+	    {throw new IndexOutOfBoundsException();}//if out of bounds
 	else{
 	String [] temp = new String[size + 1];
 	boolean addone = false; 
@@ -89,8 +89,7 @@ public class SuperArray {
 	data = temp; }}
     public String remove(int index){
 	if(index < 0 || index >= size())
-	    {System.out.println("Error");
-		return null;}
+	    {throw new IndexOutOfBoundsException();}
 	else { 
 	    
 	    String value = data[index];
