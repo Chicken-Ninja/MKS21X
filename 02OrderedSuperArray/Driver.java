@@ -99,7 +99,7 @@ public class Driver {
 }
 
 
-//oops!
+//oops!y
 public static boolean equals(OrderedSuperArray s, ArrayList<String> a){
     if(s.size() == a.size()){
       for(int i = 0; i < s.size(); i++){
